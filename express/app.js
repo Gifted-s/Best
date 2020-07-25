@@ -92,7 +92,7 @@ router.post('/handleUserItems/:id', (req, res) => {
 router.post('/handlepresent/:id/:record_id', (req, res) => {
   handlePresent(req, res, User)
 })
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+app.get('/', (req, res) =>  res.send('hello world'));
 app.use('/.netlify/functions/app', router);  // path must route to lambda
 module.exports = app
 module.exports.handler = serverless(app)

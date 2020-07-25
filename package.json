@@ -5,7 +5,7 @@
   "main": "functions/app.js",
   "scripts": {
     "build": "netlify-lambda build express",
-    "start": "nodemon local.js"
+    "start": "netlify-lambda serve express"
   },
   "author": "Adewumi Sunkanmi <sunkanmiadewumi@gmail.com>",
   "license": "MIT",
