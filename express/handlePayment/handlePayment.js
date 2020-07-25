@@ -1,7 +1,8 @@
 
 // this module will handle the payment using the paystack
 let PayStack = require('paystack-node')
-let APIKEY = process.env.PAYSTACK_SECRET_KEY
+// let APIKEY = process.env.PAYSTACK_SECRET_KEY
+let APIKEY = 'sk_test_374f2723a175f17c96481cae603dad29906a952a'
 const environment = process.env.NODE_ENV
 const paystack = new PayStack(APIKEY, environment)
 /**
@@ -51,8 +52,10 @@ const handlePayment = function (req, res, User, uuidv4) {
             let transporter = nodemailer.createTransport({
               service: 'Gmail',
               auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_PASS
+                // user: process.env.GMAIL_USER,
+                // pass: process.env.GMAIL_PASS
+                user: "sunkanmiadewumi1@gmail.com",
+                pass:'Ayodeji00;'
               }
             })
 
@@ -78,8 +81,10 @@ const handlePayment = function (req, res, User, uuidv4) {
               let transporter2 = nodemailer.createTransport({
                 service: 'Gmail',
                 auth: {
-                  user: process.env.GMAIL_USER,
-                  pass: process.env.GMAIL_PASS
+                  // user: process.env.GMAIL_USER,
+                  // pass: process.env.GMAIL_PASS
+                user: "sunkanmiadewumi1@gmail.com",
+                pass:'Ayodeji00;'
                 }
               })
 

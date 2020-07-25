@@ -27,7 +27,7 @@ const helmet = require('helmet')
 const User = require('./models/User')
 const serverless = require('serverless-http')
 global.Promise = mongoose.Promise
-mongoose.connect(process.env.MONGODB_CONN, { useNewUrlParser: true, useUnifiedTopology: true, keepAlive: true }, () => {
+mongoose.connect('mongodb://sunkanmi:sunkanmi123@ds233167.mlab.com:33167/mmd', { useNewUrlParser: true, useUnifiedTopology: true, keepAlive: true }, () => {
 console.log('connected to mongodb')
 })
 app.use(cors())

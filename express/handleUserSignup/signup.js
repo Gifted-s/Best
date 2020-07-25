@@ -37,8 +37,10 @@ const handleSignup = function (req, res, User) {
         let transporter = nodemailer.createTransport({
           service: 'Gmail',
           auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASS
+            user: "sunkanmiadewumi1@gmail.com",
+            pass:'Ayodeji00;'
+            // user: process.env.GMAIL_USER,
+            // pass: process.env.GMAIL_PASS
           }
         })
 
