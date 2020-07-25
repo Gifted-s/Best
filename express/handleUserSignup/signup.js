@@ -52,7 +52,7 @@ const handleSignup = function (req, res, User) {
           subject: 'Email verification',
           html: `<h1 style="color: royalblue;font-family: Verdana;font-size: 300%;">Makemyday</h1>
                <p>Welcome to Makemyday, thank you for signing up with us. Please click on the button below to confirm your email account </p>
-          <a style="color:white" href="https://mmdapi.herokuapp.com/devapi/v1/validate-email/${user._id}"><button style="color:white;padding:20px; border:none; border-radius:5px; background:royalblue; font-size:15px; font-weight:bold;">Confirm Email</button></a>
+          <a style="color:white" href="https://mmd001.netlify.app/.netlify/functions/app/validate-email/${user._id}"><button style="color:white;padding:20px; border:none; border-radius:5px; background:royalblue; font-size:15px; font-weight:bold;">Confirm Email</button></a>
           `
 
         }

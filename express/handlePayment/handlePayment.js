@@ -27,7 +27,7 @@ const handlePayment = function (req, res, User, uuidv4) {
       reference: verificationCode, // verification number
       amount: req.body.totalPrice * 100, //  Naira ( amount is passed in kobo ( 1 Naira make 100 Kobo) )
       email: user.email,
-      callback_url: `http://192.168.43.164:3000/event/${_idd}/${req.body.prevEvent._id}`
+      callback_url: `https://makemyday.netlify.app/event/${_idd}/${req.body.prevEvent._id}`
       // callback_url: `https://makemyday.netlify.app/event/${_idd}/${req.params.id}`
     })
 
