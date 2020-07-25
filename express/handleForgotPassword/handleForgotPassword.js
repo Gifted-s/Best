@@ -9,9 +9,9 @@
 const handleForgotPassword = function (req, res, User, bcrypt) {
   const email = req.body.e
   // find user with email and execute the callback
-  User.findOne({ email }, (err, user) => {
+  User.findOne({ email }, (error, user) => {
     // if error, throw the error
-    if (err) throw err
+    if (error) throw error
     // check if  the email is not registered or not valid
     if (!user || !user.validMail) {
       return res.status(400).send({ error: 'This email is not registerd' })
