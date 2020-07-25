@@ -7,7 +7,7 @@
  * @param {Object} bcrypt
  */
 const handleForgotPassword = function (req, res, User, bcrypt) {
-  const email = req.body.email
+  const email = req.body.e
   // find user with email and execute the callback
   User.findOne({ email }, (err, user) => {
     // if error, throw the error
