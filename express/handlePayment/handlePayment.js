@@ -67,7 +67,7 @@ const handlePayment = function (req, res, User, uuidv4) {
         "cvv": "564",
         "expirymonth": "10",
         "expiryyear": "20",
-        "currency": currency,
+        "currency": "NGN",
         "country": "NG",
         "amount": amount,
         "email": email,
