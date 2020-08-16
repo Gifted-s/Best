@@ -76,11 +76,11 @@ const handlePayment = function (req, res, User, uuidv4) {
         "lastname": lastname ? lastname:"TestLastname",
         "IP": req.ip,
         "txRef": "MC-" + Date.now(),// your unique merchant reference
-        "meta": [{ metaname: "donateeID", metavalue: "123949494DC" }],
+        "meta": [{ metaname: "donaterID", metavalue: "123949494DC" }],
         "redirect_url": `https://makemyday.netlify.app/event/${_idd}/${req.body.prevEvent._id}`,
       }
     ).then(resp => {
-      // console.log(resp)
+       console.log(resp.body)
       // let verifyInterval = setInterval(verify, 1000 * 60 * 1)
       // function verify() {
       //   console.log('called')
