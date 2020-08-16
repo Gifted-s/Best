@@ -70,7 +70,7 @@ const handlePayment = function (req, res, User, uuidv4) {
         "currency": "NGN",
         "country": "NG",
         "amount": amount,
-        "email": email,
+        "email":email,
         "phonenumber": "0902620185",
         "firstname": firstname,
         "lastname": lastname,
@@ -80,7 +80,7 @@ const handlePayment = function (req, res, User, uuidv4) {
         "redirect_url": `https://makemyday.netlify.app/event/${_idd}/${req.body.prevEvent._id}`,
       }
     ).then(resp => {
-     
+      console.log(resp)
       // let verifyInterval = setInterval(verify, 1000 * 60 * 1)
       // function verify() {
       //   console.log('called')
