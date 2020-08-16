@@ -18,7 +18,7 @@ const handleForgotPassword = require('./handleForgotPassword/handleForgotPasswor
 const handleEditProfile = require('./handleEditProfile/handleEditProfile')
 const handleGetUser = require('./handleGetUser/handleGetUser')
 const handlePayment = require('./handlePayment/handlePayment')
-const path = require('path')
+
 const bcrypt = require('bcryptjs')
 const Product = require('./models/Product')
 const { v4: uuidv4 } = require('uuid')
@@ -30,7 +30,7 @@ global.Promise = mongoose.Promise
 mongoose.connect('mongodb://sunkanmi:sunkanmi123@ds233167.mlab.com:33167/mmd', { useNewUrlParser: true, useUnifiedTopology: true, keepAlive: true }, () => {
 console.log('connected to mongodb dtabase')
 })
-router.use(cors())
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({
   extended: true
