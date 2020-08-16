@@ -28,9 +28,8 @@ const User = require('./models/User')
 const serverless = require('serverless-http')
 global.Promise = mongoose.Promise
 mongoose.connect('mongodb://sunkanmi:sunkanmi123@ds233167.mlab.com:33167/mmd', { useNewUrlParser: true, useUnifiedTopology: true, keepAlive: true }, () => {
-console.log('connected to mongodb')
+console.log('connected to mongodb dtabase')
 })
-
 router.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({
