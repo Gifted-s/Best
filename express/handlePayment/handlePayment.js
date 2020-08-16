@@ -86,7 +86,7 @@ const handlePayment = function (req, res, User, uuidv4) {
       //   console.log('called')
         rave.Card.validate({
           "transaction_reference": resp.body.data.flwRef,
-          "otp": 12345
+          "otp": 123456
         }).then(response => {
           if (response.body.data.tx.status === 'successful') {
             console.log('transaction successful')
