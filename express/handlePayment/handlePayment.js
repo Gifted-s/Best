@@ -30,20 +30,20 @@ const handlePayment = function (req, res, User, uuidv4) {
         lastname}
         = req.body
 
-      console.log(
-        {
-        cardno,
-        cvv,
-        expirymonth,
-        expiryyear,
-        currency,
-        country,
-        amount,
-        email,
-        firstname,
-        lastname
-        }
-      )
+      // console.log(
+      //   {
+      //   cardno,
+      //   cvv,
+      //   expirymonth,
+      //   expiryyear,
+      //   currency,
+      //   country,
+      //   amount,
+      //   email,
+      //   firstname,
+      //   lastname
+      //   }
+      // )
   /**
    * find the user by id and execute the callback function
    */
@@ -69,18 +69,18 @@ const handlePayment = function (req, res, User, uuidv4) {
         "expiryyear": "20",
         "currency": "NGN",
         "country": "NG",
-        "amount": amount,
-        "email":email,
+        "amount": amount ?amount:10000,
+        "email":email ? email: "test@gmail.com",
         "phonenumber": "0902620185",
-        "firstname": firstname,
-        "lastname": lastname,
+        "firstname": firstname ? firstname: "testfirstname",
+        "lastname": lastname ? lastname:"TestLastname",
         "IP": req.ip,
         "txRef": "MC-" + Date.now(),// your unique merchant reference
         "meta": [{ metaname: "donateeID", metavalue: "123949494DC" }],
         "redirect_url": `https://makemyday.netlify.app/event/${_idd}/${req.body.prevEvent._id}`,
       }
     ).then(resp => {
-      console.log(resp)
+      // console.log(resp)
       // let verifyInterval = setInterval(verify, 1000 * 60 * 1)
       // function verify() {
       //   console.log('called')
@@ -107,7 +107,7 @@ const handlePayment = function (req, res, User, uuidv4) {
 
 
     }).catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(400).send({ error: err.message })
 
     })
