@@ -30,7 +30,8 @@ global.Promise = mongoose.Promise
 mongoose.connect('mongodb://sunkanmi:sunkanmi123@ds233167.mlab.com:33167/mmd', { useNewUrlParser: true, useUnifiedTopology: true, keepAlive: true }, () => {
 console.log('connected to mongodb')
 })
-app.use(cors())
+
+router.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({
   extended: true
