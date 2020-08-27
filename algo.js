@@ -1,6 +1,6 @@
 
 
-
+// an algorithm to shift a string by a particlar index
 function caeserCipher(string, shift) {
     const alphabetArr = "abcdefghijklmnopqrstuvwxyz".split("")
     let result = ""
